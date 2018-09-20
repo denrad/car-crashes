@@ -1,0 +1,3 @@
+User-agent: *
+Host: http://car-crashes.ru
+sitemap: http://car-crashes.ru/sitemap.xml

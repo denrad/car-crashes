@@ -1,0 +1,45 @@
+{
+    "name": "denrad/crashmap",
+    "description": "Карта ДТП",
+    "homepage": "http://dev.doomer.ru/",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5",
+        "yiisoft/yii2": "~2.0.5",
+        "yiisoft/yii2-bootstrap": "^2.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "yiisoft/yii2-mongodb": "^2.1",
+        "mongodb/mongodb": "^1.0",
+        "voime/yii2-google-maps": "^1.4",
+        "zhelyabuzhsky/yii2-sitemap": "^1.1"
+    },
+    "require-dev": {
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "yiisoft/yii2-debug": "^2.0",
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3",
+        "bazilio/yii2-stubs-generator": "^1.1",
+        "sunra/php-simple-html-dom-parser": "^1.5"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        }
+    }
+}
